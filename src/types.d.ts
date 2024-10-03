@@ -3,7 +3,7 @@ export interface IUser {
   name: string;
   email: string;
   active: boolean;
-  role: "user" | "editor" | "admin";
+  role: "" | "user" | "editor" | "admin";
 }
 
 export interface IUserMutation {
@@ -11,5 +11,5 @@ export interface IUserMutation {
   name: string;
   email: string;
   active: boolean;
-  role: "user" | "editor" | "admin";
+  role: "" | "user" | "editor" | "admin";
 }
