@@ -14,10 +14,13 @@ const UserForm: React.FC<Props> = ({ addNewUser }) => {
     role: "",
   });
 
-  const changeUser = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setNewUser(prevState => ({
+const changeUser = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNewUser((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value,
+      [e.target.name]:
+        e.target.type === "checkbox"
+          ? e.target.checked
+          : e.target.value,
     }));
   };
 
